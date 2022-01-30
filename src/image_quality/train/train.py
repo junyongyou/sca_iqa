@@ -156,14 +156,12 @@ def train_main(args):
             # Everything that creates variables should be under the strategy scope.
             # In general this is only model construction & `compile()`.
             model = sca_iqa_net(n_quality_levels=args['n_quality_levels'],
-                                naive_backbone=args['naive_backbone'],
                                 backbone=args['backbone'])
 
             model.compile(loss=loss, optimizer=optimizer, metrics=[metrics])
 
     else:
         model = sca_iqa_net(n_quality_levels=args['n_quality_levels'],
-                            naive_backbone=args['naive_backbone'],
                             backbone=args['backbone'])
         model.compile(loss=loss, optimizer=optimizer, metrics=[metrics])
 
