@@ -40,9 +40,9 @@ if __name__ == '__main__':
 
     args['initial_epoch'] = 0
 
-    args['lr_base'] = 1e-4/2  # 1e-4/2
+    args['lr_base'] = 1e-4  # 1e-4/2
     args['lr_schedule'] = True
-    args['batch_size'] = 8
+    args['batch_size'] = 32
     args['epochs'] = 100
 
     args['image_aug'] = True
